@@ -1,0 +1,12 @@
+name: DistrictQuizBD
+title: DistrictQuizBD
+username: siddiqur
+account: siddiqur
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15034247
+bundleId: 10567220
+url: https://siddiqur.shinyapps.io/DistrictQuizBD/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
