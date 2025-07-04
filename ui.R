@@ -10,6 +10,8 @@ ui <- fluidPage(
   
   # Add some custom styling for better appearance
   tags$head(
+    # Link to Font Awesome CSS for icons
+    tags$link(rel = "stylesheet", href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"),
     tags$style(HTML("
       body { background-color: #f4f6f9; }
       .title-panel { color: #333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
@@ -23,6 +25,10 @@ ui <- fluidPage(
         font-size: 1.1em;
         font-weight: bold;
         text-align: center;
+      }
+      .contact-info a {
+        margin-left: 15px;
+        color: #555;
       }
     "))
   ),
@@ -48,6 +54,31 @@ ui <- fluidPage(
     mainPanel(
       # The main map output - Height increased to 97vh
       leafletOutput("map", height = "97vh")
+    )
+  ),
+  
+  # Contact Information Section
+  hr(),
+  fluidRow(
+    class = "contact-info",
+    style = "text-align: right; padding-right: 20px; padding-bottom: 10px;",
+    tags$a(
+      href = "https://www.linkedin.com/in/msrahman21",
+      target = "_blank", # Opens in a new tab
+      tags$i(class = "fab fa-linkedin", style = "font-size: 1.2em;"),
+      "LinkedIn"
+    ),
+    tags$a(
+      href = "https://github.com/siddik95",
+      target = "_blank",
+      tags$i(class = "fab fa-github", style = "font-size: 1.2em;"),
+      "GitHub"
+    ),
+    tags$a(
+      href = "https://siddik95.github.io/",
+      target = "_blank",
+      tags$i(class = "fas fa-globe", style = "font-size: 1.2em;"),
+      "Personal Webpage"
     )
   )
 )
